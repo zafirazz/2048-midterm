@@ -7,4 +7,5 @@ The rules are very easy! You just need to move the tiles(by typing w-up,s-down,a
 
 
 
+![image](https://user-images.githubusercontent.com/66420708/161809832-218b3921-13ce-45ae-b77d-9c87bbe7b251.png)
 
