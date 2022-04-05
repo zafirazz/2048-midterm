@@ -38,6 +38,13 @@ def curr_state(matrix):
             return 'KEEP GOING'
     return 'LOST!'
 
+#def get_score():
+#    score = 0
+#    for r in _map_data:
+#        for c in r:
+#            score += 0 if c < 4 else c * int((math.log(c, 2) - 1.0))
+#    return score
+
 def compressing_game(matrix):
     status = False
     new_matrix = []
