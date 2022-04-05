@@ -9,3 +9,4 @@ The rules are very easy! You just need to move the tiles(by typing w-up,s-down,a
 
 ![image](https://user-images.githubusercontent.com/66420708/161809832-218b3921-13ce-45ae-b77d-9c87bbe7b251.png)
 
+![image](https://user-images.githubusercontent.com/66420708/161810423-8f96ac9c-0442-4dea-aa42-ca6a00fd3233.png)
