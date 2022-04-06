@@ -93,10 +93,10 @@ class Game(Frame):
                 self.matrix = functions.another_round(self.matrix)
                 self.history.append(self.matrix)
                 self.draw()
-                if functions.curr_state(self.matrix) == 'WIN':
+                if functions.curr_state(self.matrix) == 'WON!':
                     self.cells[1][1].configure(text="CONG", bg=v.BG_MP)
                     self.cells[1][2].configure(text="RATULATIONS!", bg=v.BG_MP)
-                if functions.curr_state(self.matrix) == 'LOST':
+                if functions.curr_state(self.matrix) == 'LOST!':
                     self.cells[1][1].configure(text="GAME", bg=v.BG_MP)
                     self.cells[1][2].configure(text="OVER!", bg=v.BG_MP)
 
