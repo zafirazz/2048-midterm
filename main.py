@@ -3,7 +3,7 @@ import random
 import functions
 import visual as v
 
-def gen():
+def generate():
     return random.randint(0, v.LENGTH - 1)
 
 class Game(Frame):
@@ -101,9 +101,9 @@ class Game(Frame):
                     self.cells[1][2].configure(text="OVER!", bg=v.BG_MP)
 
     def generate_next(self):
-        index = (gen(), gen())
+        index = (generate(), generate())
         while self.matrix[index[0]][index[1]] != 0:
-            index = (gen(), gen())
+            index = (generate(), generate())
         self.matrix[index[0]][index[1]] = 2
 
 game = Game()
