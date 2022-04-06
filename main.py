@@ -10,10 +10,6 @@ class Game(Frame):
     def __init__(self):
         Frame.__init__(self)
 
-        self.grid()
-        self.master.title('The 2048 variation')
-        self.master.bind("<Key>", self.keys)
-
         self.commands = {
             v.UP: functions.up,
             v.DOWN: functions.down,
@@ -24,7 +20,10 @@ class Game(Frame):
             v.LEFT_ALT: functions.left,
             v.RIGHT_ALT: functions.right,
         }
-
+        self.grid()
+        self.master.title('The 2048 variation')
+        self.master.bind("<Key>", self.keys)
+        
         self.cells = []
         self.build_game()
         self.matrix = functions.creating_game(v.LENGTH)
@@ -86,10 +85,9 @@ class Game(Frame):
         if key == v.KEY_BACK and len(self.history) > 1:
             self.matrix = self.history.pop()
             self.draw()
-            print('back on step total step:', len(self.history))
         elif key in self.commands:
-            self.matrix, done = self.commands[key](self.matrix)
-            if done:
+            self.matrix, status = self.commands[key](self.matrix)
+            if status:
                 self.matrix = functions.another_round(self.matrix)
                 self.history.append(self.matrix)
                 self.draw()
